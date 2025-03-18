@@ -88,7 +88,7 @@ public class DashboardPage extends Base{
 		return driver.findElement(inputAddFieldName);
 	}
 
-	public WebElement geButtonFieldsDialogOk() {
+	public WebElement getButtonFieldsDialogOk() {
 		return driver.findElement(buttonFieldsDialogOk);
 	}
 

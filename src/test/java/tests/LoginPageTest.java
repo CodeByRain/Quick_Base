@@ -99,7 +99,7 @@ public class LoginPageTest extends Base {
 		System.out.println("Enter details in New Fields Dialog");
 		String fieldName ="Name";
 		dbPage.getInputAddFieldName().sendKeys(fieldName);
-		dbPage.getButtonFieldsDialogCancel().click();
+		dbPage.getButtonFieldsDialogOk().click();
 		System.out.println("Verify table of fields for added field : "+ fieldName);
 		Assert.assertTrue(dbPage.isElementPresentInTable(fieldName, dbPage.getFieldsTable()), "Expected field not found in the table");
 		WaitUtils.waitForElementToBeVisible(driver, dbPage.getAppSettings(), 20);
@@ -114,7 +114,7 @@ public class LoginPageTest extends Base {
 
 	}
 
-	@Test(priority=3, dependsOnMethods = {"testLogin"})
+	@Test(priority=3, dependsOnMethods = {"testLogin"}, enabled=true)
 	@Description("Verify Table View page and functionality")
 	public void testTablesView() throws InterruptedException {
 		System.out.println("Tables View Test Started");
@@ -130,7 +130,7 @@ public class LoginPageTest extends Base {
 		Assert.assertEquals(dbPage.getInputSearchTable().getText(), "", "Searched table name is not deleted from search box");
 	}
 
-	@Test(priority=4, dependsOnMethods = {"testLogin"})
+	@Test(priority=4, dependsOnMethods = {"testLogin"}, enabled=true)
 	@Description("Verify delete table functionality")
 	public void testDeleteTable() throws InterruptedException {
 		System.out.println("Delete Table Test Started");

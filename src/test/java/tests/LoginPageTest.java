@@ -24,7 +24,7 @@ public class LoginPageTest extends Base {
 	public static final String loginPageMessage = "Do you have a Quickbase single sign-on (SSO) account?";
 	public static final String needToLoginMessage = "You need to sign in to get to that page.";
 	public static Logger log = LogManager.getLogger(LoginPageTest.class.getName());
-	String userName = "mendhe.varsha@gmail.com";
+	String userName = "abc_test@gmail.com";
 	String password = "Quickbase@123";
 	String newTableName = CommonMethodsUtil.generateRandomString(6)+" Test_Table";
 	WebDriverWait wait;
